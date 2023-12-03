@@ -1,0 +1,410 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #d0ead0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product{
+    width: 90%;
+    max-width: 50%;
+    display: flex;
+}
+.gallery{
+    flex-basis: 47%;
+    background: #241e20;
+    transform:scale(1.08);
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.gallery img{
+    width: 100%;
+    display: block;
+    padding-top: 30%;
+}
+.details{
+    flex-basis: 53%;
+    background: var(--primary-color);
+    padding-left: 10%;
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 80%;
+    font-weight: 500;
+    color: var(--secondary-color);
+
+}
+.details h1{
+    color: #333;
+    font-size: 200%;
+    margin-top: 10%;
+}
+.details h2{
+    color: var(--secondary-color);
+    font-size: 180%;
+    font-weight: 600;
+    margin-top: 3%;
+}
+.details h3{
+    color: #178f57;
+    margin-bottom: 20px;
+    margin-top: 3%;
+    font-size: 100%;
+}
+.details p{
+    margin-right: 10%;
+}
+.details form{
+    font-size: 15px;
+    font-weight: 400;
+}
+.size-select{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.size-select p{
+    width: 70px;
+}
+.size-select input:checked + span{
+    color: blue;
+    font-weight: 600;
+
+}
+.size-select input{
+    display: none;
+}
+.size-select span{
+    padding: 5%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.color-select{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.color-select p{
+    width: 70px;
+}
+.color-select span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+
+.color-select span{
+    padding: 5%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.color-1{
+    background: red;
+}
+.color-2{
+    background: green;
+}
+.color-3{
+    background: blue;
+}
+.color-4{
+    background: pink;
+}
+.color-select input{
+    display: none;
+}
+.color-select input:checked + span{
+    transform: scale(0.5);
+    box-shadow: 0 0 0 4px var(--primary-color), 0 0 0 6px #622b2b;
+}
+.quantity-select{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.quantity-select p{
+    width: 75px;
+    color:var(--secondary-color);
+}
+.quantity-select input{
+    background: var(--primary-color); 
+    border: o;
+    outline: o;
+    padding: 2px 2px 2px 15px;
+    width: 50px;
+    border-radius: 12px;
+}
+form button{
+    background: #553ff0;
+    color: var(--primary-color);
+    font-size: 17px;
+    width: 80%;
+    padding: 3%;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    margin-top: 50px;
+    box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+    cursor: pointer;
+}
+.controls{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+.btn{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px;
+    cursor: pointer;
+}
+.btn.active{
+    background: #553ff0;
+}
+
+/* dark mode */
+
+#icon{
+    width: 2%;
+    cursor: pointer;
+    position: fixed;
+    top: 1%; /* İstediğiniz mesafeye göre ayarlayın */
+    right: 1%;
+}
+
+:root{
+    --primary-color:#fff;
+    --secondary-color:#777;
+}
+.dark-theme{
+    --primary-color:rgb(71, 70, 70);
+    --secondary-color:#0e0202;
+}
+
+/*navbar*/
+
+.menu {
+    position: fixed;
+    top: 0%;
+    right: 2%;
+    background-color: rgba(208, 234, 208, 0.8); /* #d0ead0 renk kodu ile saydam arka plan rengi */
+    padding: 1%;
+    z-index: 1000; /*navbar öğesinin diğer sayfadaki öğelerin üzerine çıkmasını sağlar.*/
+    transition: background-color 0.3s;
+    width: 29%;
+    
+}
+
+ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+li {
+    display: inline-block; /*yan yana dizilim icin gerekli*/
+    margin-left: 7%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.4s; 
+}
+
+a:hover {
+    color: #553ff0; /* Hover rengini istediğiniz bir renk olarak ayarlayabilirsiniz */
+}
+/*sadece sayfanin asagi kaymasi icin*/
+.content {
+    padding: 70px 20px 20px;
+    background: #d0ead0;
+}
+
+/*urun farkliligini saglayan butonlarin konumlari*/
+
+.go-back div{
+    width: 60px;
+    height: 60px;
+    margin-left: 1%;
+    background: #b7aeae;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #3b1e2d;
+    box-shadow: 0 10px 20px rgba((rgb(138, 92, 73)), 26, 26, 5.22);
+    cursor: pointer;
+}
+.go-forward div{
+    width: 60px;
+    height: 60px;
+    margin-left: 1%;
+    background: #b7aeae;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #3b1e2d;
+    box-shadow: 0 10px 20px rgba((rgb(138, 92, 73)), 26, 26, 5.22);
+    cursor: pointer;
+}
+
+/*slider
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+ }
+ #slider input[type=radio] {
+    display: none;
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+ }
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+ }
+ #slides .slide_1 {
+    background: #aab2b5;
+ }
+ #slides .slide_2 {
+    background: #dae4eb;
+ }
+ #slides .slide_3 {
+    background: #007EA7;
+ }
+ #slides .slide_4 {
+    background: #00A8E8;
+ }
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #slide1:checked ~ #controls label:nth-child(2),
+ #slide2:checked ~ #controls label:nth-child(3),
+ #slide3:checked ~ #controls label:nth-child(4),
+ #slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #slide1:checked ~ #controls label:nth-last-child(2),
+ #slide2:checked ~ #controls label:nth-last-child(3),
+ #slide3:checked ~ #controls label:nth-last-child(4),
+ #slide4:checked ~ #controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+
+*/
+
+
+
+
+
+
+   

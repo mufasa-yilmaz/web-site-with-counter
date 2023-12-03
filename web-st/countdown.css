@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 5rem;
+    color: var(--secondary-color);
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.3rem;
+}
+
+
+/* dark mode */
+
+#icon{
+    width: 2%;
+    cursor: pointer;
+    position: fixed;
+    top: 1%; /* İstediğiniz mesafeye göre ayarlayın */
+    right: 1%;
+}
+
+:root{
+    --primary-color:rgb(149, 163, 123);
+    --secondary-color:rgb(7, 8, 6);
+}
+.dark-theme{
+    --primary-color:rgb(16, 15, 15);
+    --secondary-color:#fff;
+}
+
+/*navbar*/
+
+.menu {
+    position: fixed;
+    top: 0%;
+    right: 2%;
+    background-color: var(--primary-color);
+    padding: 1%;
+    z-index: 1000; /*navbar öğesinin diğer sayfadaki öğelerin üzerine çıkmasını sağlar.*/
+    /*transition: background-color 0.3s;*/
+    width: 29%;
+    
+}
+
+ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+li {
+    display: inline-block; /*yan yana dizilim icin gerekli*/
+    margin-left: 7%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.4s; 
+}
+
+a:hover {
+    color: #553ff0; /* Hover rengini istediğiniz bir renk olarak ayarlayabilirsiniz */
+}
+/*sadece sayfanin asagi kaymasi icin*/
+.content {
+    padding: 70px 20px 20px;
+    background: #d0ead0;
+}
+
+#icon{
+    width: 2%;
+    cursor: pointer;
+    position: fixed;
+    top: 1%; /* İstediğiniz mesafeye göre ayarlayın */
+    right: 1%;
+}
+
+:root{
+    --primary-color:#fff;
+    --secondary-color:#777;
+}
+.dark-theme{
+    --primary-color:rgb(71, 70, 70);
+    --secondary-color:#0e0202;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <!--kontrol-->
+    <div class="go-back">
+        <div><i class="fa-solid fa-backward"></i></div>
+    </div>
+    <!--navbar--> 
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hesap.html">Hesap</a></li>
+            <li><a href="#">Kategoriler</a></li>
+            <li><a href="sepet.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <!--dark-mode resmi-->
+            <li><img src="moon.png" id="icon"></li>
+        </ul>
+    </div>
+    
+    <div class="product">
+        <div class="gallery">
+            <img src="image1.png" id="productImg">
+            <div class="controls">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+        </div>
+
+        <div class="details">
+            <h1>Casual T-Shirt</h1>
+            <h2>$15.00</h2>
+            <h3>30% OFF</h3>
+            <p>Lorem laboriosam. id nam eveniet voluptate autem ex eligendi perspiciatis ab? Unde qui eveniet veniam?</p>
+            <form>
+                <div class="size-select">
+                    <p>Size</p>
+                    <!--label da for,bağlantı kurulan input elementinin id özelliğine işaret eder. bu sayede etikete basilinca baglantili input ozelligi secilir.  -->
+                    <label for="small">
+                        <input type="radio" name="size" id="small">
+                        <span>S</span>
+                    </label>
+                    <label for="medium">
+                        <input type="radio" name="size" id="medium">
+                        <span>M</span>
+                    </label>
+                    <label for="large">
+                        <input type="radio" name="size" id="large">
+                        <span>L</span>
+                    </label>
+                    <label for="x-large">
+                        <input type="radio" name="size" id="x-large">
+                        <span>XL</span>
+                    </label>
+                    <label for="xx-large">
+                        <input type="radio" name="size" id="xx-large">
+                        <span>XXL</span>
+                    </label>
+                </div>
+
+                <div class="color-select">
+                    <p>Color</p>
+                    <label for="red">
+                        <input type="radio" name="color" id="red">
+                        <span class="color-1"></span>
+                    </label>
+                    <label for="green">
+                        <input type="radio" name="color" id="green">
+                        <span class="color-2"></span>
+                    </label>
+                    <label for="blue">
+                        <input type="radio" name="color" id="blue">
+                        <span class="color-3"></span>
+                    </label>
+                    <label for="pink">
+                        <input type="radio" name="color" id="pink">
+                        <span class="color-4"></span>
+                    </label>
+                </div>
+
+                <div class="quantity-select">
+                    <p>Quantity</p>
+                    <input type="number" value="1" id="myNumberInput" oninput="checkMinValue()">
+                    
+                </div>
+                <button>Buy Now</button>
+            </form>
+        </div>
+    </div>
+    <div class="go-forward">
+        <div><i class="fa-solid fa-forward"></i></div>
+    </div>
+    <!--sayfanin geri kalan kismi-->
+    
+</div>
+<div class="content">
+    <!-- Sayfanın geri kalan içeriği buraya eklenecek -->
+    <p>Content goes here...</p>
+</div>
+<div class="content">
+    <!-- Sayfanın geri kalan içeriği buraya eklenecek -->
+    <p>Content goes here...</p>
+</div>
+<div class="content">
+    <!-- Sayfanın geri kalan içeriği buraya eklenecek -->
+    <p>Content goes here...</p>
+</div>
+<div class="content">
+    <!-- Sayfanın geri kalan içeriği buraya eklenecek -->
+    <p>Content goes here...</p>
+</div>
+<div class="content">
+    <!-- Sayfanın geri kalan içeriği buraya eklenecek -->
+    <p>Content goes here...</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
